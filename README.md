@@ -1,6 +1,6 @@
 # basilisk-captcha-solver
 
-Solver for Basilisk captcha, the one on faucetpay.io. There are two parts, a slider puzzle and a
+Solver for Basilisk captcha. There are two parts, a slider puzzle and a
 "click these 3 icons in order" step, and you need both to get the token. It does everything with
 normal image processing.
 
