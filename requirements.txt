@@ -2,3 +2,4 @@ numpy
 pillow
 scipy
 curl_cffi
+cryptography
