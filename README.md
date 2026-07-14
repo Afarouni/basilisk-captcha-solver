@@ -74,7 +74,7 @@ token = BasiliskV4Client("a3760bfe5cf4254b2759c19fb2601667", "https://faucetpay.
 ```
 
 `fast=True` trims the idle waiting but keeps a little think time before each answer, otherwise the
-server rejects it for being too quick. check the pass rate yourself:
+server rejects it for being too quick. check the pass rate yourself (100% attow):
 
 ```
 python eval/accuracy_v4.py -n 50
