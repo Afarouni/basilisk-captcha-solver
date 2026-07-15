@@ -86,11 +86,29 @@ Just the image solving, offline on the sample images:
 python examples/solve_local.py
 ```
 
+## the deobfuscator
+
+`deobfuscator/deobf.js`. It works on any version of their widget.
+
+webcrack undoes the obfuscator, babel renames everything scope aware, and a (local) AI model names what is
+left. Then it checks the output is the same code with different names, and exits non zero if it is not.
+
+```
+cd deobfuscator
+npm install
+ollama pull qwen2.5-coder:7b
+node deobf.js ../basilisk-captcha.obfuscated.js -o out.js
+```
+
+Set ollama's context to 16k or the batches get cut off. `--provider gemini` if you have no gpu, `--no-ai`
+to skip the naming, `--fetch` to grab the JS that is live right now.
+
 ## files
 
 ```
 basilisk_v4/          the v4 protocol: sealing, pow, fingerprint, device pool, client
 basilisk/             the image solving (slider + icons), reused by v4
+deobfuscator/         the tool that made the deobfuscated js below
 basilisk-captcha.deobfuscated.js   their widget, deobfuscated and renamed
 basilisk-captcha.obfuscated.js     the same widget as served, obfuscated
 examples/             live and offline demos

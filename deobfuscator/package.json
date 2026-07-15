@@ -1,0 +1,13 @@
+﻿{
+  "name": "basilisk-deobfuscator",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.111.0",
+    "@babel/generator": "^8.0.0",
+    "@babel/parser": "^8.0.4",
+    "@babel/traverse": "^8.0.4",
+    "@babel/types": "^8.0.4",
+    "webcrack": "^2.16.0"
+  }
+}
